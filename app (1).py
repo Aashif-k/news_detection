@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 # Streamlit deployment code
 import streamlit as st
+import pickle
 
 def main():
     st.title("Fake and Real News Detection")
