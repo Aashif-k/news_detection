@@ -20,8 +20,6 @@ def main():
 
     
     # User input
-    progress_text = "Operation in progress. Please wait."    
-    my_bar = st.progress(0, text=progress_text)
     user_input = st.text_area("Enter news text to analyze:")
 
     if st.button("Analyze"):
