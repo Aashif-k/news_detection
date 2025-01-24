@@ -16,21 +16,14 @@ def main():
 
     # User input
     user_input = st.text_area("Enter news text to analyze:")
-    progress_text = "Operation in progress. Please wait."
-    my_bar = st.progress(0, text=progress_text)
-
-    for percent_complete in range(100):
-        my_bar.progress(percent_complete + 1, text=progress_text)
-        time.sleep(0.1)
-        my_bar.empty()
 
     if st.button("Analyze"):
         progress_text = "Operation in progress. Please wait."
         my_bar = st.progress(0, text=progress_text)
-        for percent_complete in range(100):
-            my_bar.progress(percent_complete + 1, text=progress_text)
-            time.sleep(0.1)
-            my_bar.empty()
+    for percent_complete in range(100):
+        my_bar.progress(percent_complete + 1, text=progress_text)
+        time.sleep(0.1)
+        my_bar.empty()
         
     if user_input.strip():
     # Transform user input
