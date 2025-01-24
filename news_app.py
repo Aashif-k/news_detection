@@ -15,6 +15,7 @@ def main():
         vectorizer = pickle.load(vectorizer_file)
 
     # User input
+    my_bar = st.progress(0, text=progress_text)
     user_input = st.text_area("Enter news text to analyze:")
 
     if st.button("Analyze"):
