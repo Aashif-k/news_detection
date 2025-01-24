@@ -3,15 +3,7 @@
 import streamlit as st
 import pickle
 import time
-st.markdown(
-    """
-    <style>
-        .stProgress > div > div > div > div {
-            background-color: green;
-        }
-    </style>""",
-    unsafe_allow_html=True,
-)
+
 def main():
     st.title("News Detection")
 
