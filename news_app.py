@@ -25,6 +25,13 @@ def main():
         my_bar.empty()
 
     if st.button("Analyze"):
+        progress_text = "Operation in progress. Please wait."
+        my_bar = st.progress(0, text=progress_text)
+
+    for percent_complete in range(100):
+        my_bar.progress(percent_complete + 1, text=progress_text)
+        time.sleep(0.1)
+        my_bar.empty()
         
         if user_input.strip():
             # Transform user input
@@ -38,6 +45,14 @@ def main():
                 st.error("This news is Fake.")
         else:
             st.warning("Please enter some text.")
+    st.markdown(
+        """
+        <style>
+        .stProgress > div > div > div > div {
+        background-color: green;
+        }
+        </style>""",
+        unsafe_allow_html=True,)        
 
 if __name__ == "__main__":
     main()
