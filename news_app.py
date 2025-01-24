@@ -12,13 +12,7 @@ with open('tfidf_vectorizer.pkl', 'rb') as vectorizer_file:
 def main():
     st.title("News Detection")
 
-    # Load the model and vectorizer
-    with open('random_forest_model.pkl', 'rb') as model_file:
-        model = pickle.load(model_file)
-
-    with open('tfidf_vectorizer.pkl', 'rb') as vectorizer_file:
-        vectorizer = pickle.load(vectorizer_file)
-
+    
     # User input
     my_bar = st.progress(0, text=progress_text)
     user_input = st.text_area("Enter news text to analyze:")
