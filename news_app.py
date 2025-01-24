@@ -39,12 +39,12 @@ def main():
         # Predict
         prediction = model.predict(input_vectorized)[0]
         # Display result
-         if prediction == 1:
-             st.success("This news is Real.")
-         else:
-             st.error("This news is Fake.")
-         else:
-            st.warning("Please enter some text.")
+    if prediction == 1:
+        st.success("This news is Real.")
+    else:
+        st.error("This news is Fake.")
+    else:
+        st.warning("Please enter some text.")
     st.markdown(
         """
         <style>
