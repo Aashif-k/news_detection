@@ -33,17 +33,17 @@ def main():
         time.sleep(0.1)
         my_bar.empty()
         
-        if user_input.strip():
-            # Transform user input
-            input_vectorized = vectorizer.transform([user_input])
-            # Predict
-            prediction = model.predict(input_vectorized)[0]
-            # Display result
-            if prediction == 1:
-                st.success("This news is Real.")
-            else:
-                st.error("This news is Fake.")
-        else:
+    if user_input.strip():
+    # Transform user input
+        input_vectorized = vectorizer.transform([user_input])
+        # Predict
+        prediction = model.predict(input_vectorized)[0]
+        # Display result
+         if prediction == 1:
+             st.success("This news is Real.")
+         else:
+             st.error("This news is Fake.")
+         else:
             st.warning("Please enter some text.")
     st.markdown(
         """
