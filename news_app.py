@@ -2,6 +2,7 @@
 # Streamlit deployment code
 import streamlit as st
 import pickle
+import time
 st.markdown(
     """
     <style>
