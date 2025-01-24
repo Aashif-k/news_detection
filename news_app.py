@@ -3,18 +3,15 @@
 import streamlit as st
 import pickle
 import time
-with open('random_forest_model.pkl', 'rb') as model_file:
-        model = pickle.load(model_file)
-
-with open('tfidf_vectorizer.pkl', 'rb') as vectorizer_file:
-        vectorizer = pickle.load(vectorizer_file)
 
 def main():
     st.title("News Detection")
-    
+        with open('random_forest_model.pkl', 'rb') as model_file:
+        model = pickle.load(model_file)
 
+        with open('tfidf_vectorizer.pkl', 'rb') as vectorizer_file:
+        vectorizer = pickle.load(vectorizer_file)
 
-    
     # User input
     user_input = st.text_area("Enter news text to analyze:")
 
